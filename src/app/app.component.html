@@ -1,9 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1>Hello World!</h1>
-      <button [style.backgroundColor]="'red'">Save</button>
-      <button [class.isActive]="isActive">Clear</button>
+      <!-- <input type="text" [value]="email" (keyup.enter)="email=$event.target.value; onKyeUp()"> -->
+      <h1>Angular</h1> <br>
+      <input type="text" [(ngModel)]="email" (keyup.enter)="onKyeUp()"> <br>
+      <h1>Course Details</h1> <br>
+      {{course.title | uppercase}} <br>
+      {{course.rating | number:'1.1-1'}} <br>
+      {{course.students | number}} <br>
+      {{course.price | currency:'INR':true:'3.2-2'}} <br>
+      {{course.releaseDate | date:'shortDate'}}
     </div>
   </div>
 </div>
